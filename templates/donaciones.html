@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es-ar">
+
+<head>
+  <title>{%block title%} Donaciones {%endblock title%}</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link href="static/assets/css/style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+      
+
+      <h1 class="logo me-auto"> <a href="/inicio"></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="inicio" class="logo me-auto"><img src="static/assets/favicon.png" alt="" class="img-fluid"></a> -->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="/inicio">Inicio </a></li>
+          <li><a class="nav-link scrollto" href="/nosotros"style="color: #111000;">Conocenos</a></li>
+          <li><a class="nav-link scrollto" href="/noticias"style="color: #111000;">Noticias</a></li>
+          <li><a class="nav-link scrollto" href="/donaciones"style="color: #111000;">Donaciones</a></li>
+          <li><a class="nav-link scrollto" href="#"></a></li>
+          <li><a class="nav-link scrollto" href="#team"></a></li>
+          <li><a class="nav-link scrollto" href="#contact"></a></li>
+          {% if user.is_authenticated  %}
+          <li><a class="getstarted scrollto" href='/logout'>Cerrar Sesion:  {{request.user}}</a></li>
+          {% else %}
+          <li><a class="getstarted scrollto" href='/login'>Iniciar Sesion</a></li>
+          {% endif %}
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+    
+    </header>
+  <main>
+    <!-- ======= Hero Section ======= -->
+  <section table style="background-color:#97cdb4">
+          <h1 style="color:rgb(74, 158, 74)"></h1>
+          <h2></h2>
+        </div>
+        <div class="col-lg-4 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="10000"> 
+          <img src="static/assets/iconoONG.png" class="img-fluid animated" alt=""> 
+        </div>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <section id="services" class="services section-bg">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Donaciones</h2>
+        <p></p>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bxl-dribbble"></i></div>
+            <h4><a href="">Mi Cuenta Principal</a></h4>
+            <p>CBU: 65465465465465465465464</p>
+            <p>Alias: xxxx.xxxx.xxxx</p>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-file"></i></div>
+            <h4><a href="">Mi Cuenta secundaria </a></h4>
+            <p>CBU: 65465465465465465465464</p>
+            <p>Alias: xxxx.xxxx.xxxx</p>
+          </div>
+        </div>
+
+         <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-tachometer"></i></div>
+            <h4><a href="">Mi tercera cuenta</a></h4>
+            <p>CBU: 65465465465465465465464</p>
+            <p>Alias: xxxx.xxxx.xxxx</p>
+          </div>
+        </div>
+
+        {% comment %}
+        <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-layer"></i></div>
+            <h4><a href="">cuarta cuenta</a></h4>
+            <p>sale noche de free fasher?</p>
+          </div>
+        </div> {% endcomment %}
+
+      </div>
+
+    </div>
+  </section><!-- End Services Section -->
+
+  {% include 'footer.html'%}
